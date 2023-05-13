@@ -9,16 +9,16 @@ public class Main {
     private static final int W_MASK = 0x1;
 
     public static void main(String[] args) {
-        byte[] bytes = readBinaryFile("homework-files/listing_0038_many_register_mov");
+        byte[] bytes = readBinaryFile("homework-input/listing_0038_many_register_mov");
 
-        StringBuilder textToWrite = new StringBuilder("bytes 16\n\n");
+        StringBuilder textToWrite = new StringBuilder("bits 16\n\n");
 
         for (int i = 0; i < bytes.length; i += 2) {
             textToWrite.append(translateBytesTo8086Asm(new byte[]{bytes[i], bytes[i+1]}));
             textToWrite.append("\n");
         }
 
-        writeToTextFile("homework-files/listing_0038_output.asm", textToWrite.toString());
+        writeToTextFile("homework-output/listing_0038_output.asm", textToWrite.toString());
 
         System.out.println(textToWrite);
     }

@@ -1,9 +1,9 @@
 package listing_0038;
 
 public enum Mod {
-    RR(0x2);
+    RR(0x3);
 
-    public static final int MOD_MASK = 0x2;
+    public static final int MOD_MASK = 0x3;
     private final int value;
 
     Mod(int value) {
